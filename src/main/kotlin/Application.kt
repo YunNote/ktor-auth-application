@@ -1,5 +1,6 @@
 package com.auth
 
+import com.auth.core.module.configurationContentNegotiation
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
@@ -7,5 +8,6 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
+    configurationContentNegotiation()
     configureRouting()
 }
