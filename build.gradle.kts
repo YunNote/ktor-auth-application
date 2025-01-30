@@ -6,6 +6,7 @@ val logback_version: String by project
 plugins {
     kotlin("jvm") version "2.1.10"
     id("io.ktor.plugin") version "3.0.3"
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.10"
 }
 
 group = "com.auth"
@@ -34,6 +35,12 @@ dependencies {
     // https://mvnrepository.com/artifact/io.ktor/ktor-server-content-negotiation-jvm
     implementation("io.ktor:ktor-server-content-negotiation:$KTOR_VERSION")
     implementation("io.ktor:ktor-serialization-kotlinx-json:$KTOR_VERSION")
+
+    implementation("io.ktor:ktor-server-auth:$KTOR_VERSION")
+    implementation("io.ktor:ktor-server-auth-jwt:$KTOR_VERSION")
+
+    // Error Handler
+    implementation("io.ktor:ktor-server-status-pages:$KTOR_VERSION")
 
 
 }
