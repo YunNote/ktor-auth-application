@@ -1,8 +1,7 @@
 package com.auth
 
-import com.auth.core.module.configurationContentNegotiation
-import com.auth.core.module.configurationGlobalExceptionHandlerModule
-import com.auth.core.module.configureRouting
+import com.auth.core.module.*
+import com.auth.featgure.auth.application.JwtProvider
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
@@ -11,7 +10,10 @@ fun main(args: Array<String>) {
 
 fun Application.module() {
 
+    val jwtProvider = JwtProvider(this)
+
     configurationGlobalExceptionHandlerModule()
     configurationContentNegotiation()
-    configureRouting()
+    configureSecurityModule(jwtProvider)
+    configureRouting(jwtProvider)
 }
