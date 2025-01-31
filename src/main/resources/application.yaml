@@ -11,3 +11,5 @@ jwt:
   issuer: ktor-auth
   audience: ktor-auth-service
   realm: Access ALL
+  access-token-expire: 60  # 1시간
+  refresh-token-expire: 43200 # 30일
