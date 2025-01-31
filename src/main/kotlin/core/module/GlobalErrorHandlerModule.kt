@@ -10,7 +10,7 @@ fun Application.configurationGlobalExceptionHandlerModule() {
 
     install(StatusPages) {
         exception<Throwable>  { call, cause ->
-            print(cause.toString())
+            println(cause.toString())
             call.respondText( text = cause.toString()
             )
         }

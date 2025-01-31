@@ -10,6 +10,6 @@ fun Application.configureRouting(jwtProvider: JwtProvider) {
 
     routing {
 
-        authRouter(AuthService(jwtProvider))
+        authRouter()
     }
 }
