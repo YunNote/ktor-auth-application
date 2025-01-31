@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
 fun Application.module() {
 
     val jwtProvider = JwtProvider(this)
-
+    configurationDependencyInjectionModule()
     configurationGlobalExceptionHandlerModule()
     configurationContentNegotiation()
     configureSecurityModule(jwtProvider)

@@ -4,7 +4,7 @@ import com.auth.core.application.JwtProvider
 import com.auth.featgure.auth.application.dto.TokenResponse
 import com.auth.featgure.auth.route.dto.AuthRequest
 
-class AuthService(val jwtProvider: JwtProvider) {
+class AuthService(private val jwtProvider: JwtProvider ) {
 
     fun login(request: AuthRequest): TokenResponse {
 

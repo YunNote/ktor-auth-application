@@ -2,10 +2,11 @@ import io.ktor.plugin.*
 
 val kotlin_version: String by project
 val logback_version: String by project
+val koin_version: String by project
 
 plugins {
-    kotlin("jvm") version "2.1.10"
-    id("io.ktor.plugin") version "3.0.3"
+    kotlin("jvm") version "2.0.20"
+    id("io.ktor.plugin") version "2.3.12"
     id("org.jetbrains.kotlin.plugin.serialization") version "2.1.10"
 }
 
@@ -42,5 +43,8 @@ dependencies {
     // Error Handler
     implementation("io.ktor:ktor-server-status-pages:$KTOR_VERSION")
 
+    // Koin
+    implementation("io.insert-koin:koin-ktor:$koin_version")
+    implementation("io.insert-koin:koin-logger-slf4j:$koin_version")
 
 }
