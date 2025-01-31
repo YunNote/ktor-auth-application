@@ -1,7 +1,7 @@
 package com.auth
 
 import com.auth.core.module.*
-import com.auth.featgure.auth.application.JwtProvider
+import com.auth.core.application.JwtProvider
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
